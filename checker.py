@@ -1,7 +1,7 @@
 import requests
 
 
-class Server:
+class ServerChecker:
 
     def __init__(self, url):
         self.url = url

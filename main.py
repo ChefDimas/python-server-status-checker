@@ -1,5 +1,8 @@
-from checker import Request
+from server_manager import ServerManager
 
-r = Request('https://www.google.com/')
-print(r.get_request())
+def main():
+    manager = ServerManager()
+    manager.run()
 
+if __name__ == "__main__":
+    main()
