@@ -14,5 +14,6 @@ class ServerManager:
                 if is_up:
                     print(f"[INFO] {server.url} is up. Response time: {response_time:.2f} seconds")
                 else:
-                    pass
+                    # Alert.send_alert(f"{server.url} is down!")
+                        pass
             time.sleep(CHECK_INTERVAL)
