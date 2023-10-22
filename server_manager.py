@@ -1,6 +1,7 @@
 import time
 from config import SERVERS, CHECK_INTERVAL
 from checker import ServerChecker
+from alert import Alert
 
 
 class ServerManager:
@@ -14,6 +15,6 @@ class ServerManager:
                 if is_up:
                     print(f"[INFO] {server.url} is up. Response time: {response_time:.2f} seconds")
                 else:
-                    # Alert.send_alert(f"{server.url} is down!")
-                        pass
+                    Alert.send_alert(f"{server.url} is down!")
+
             time.sleep(CHECK_INTERVAL)
